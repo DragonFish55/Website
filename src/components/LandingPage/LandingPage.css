@@ -1,6 +1,12 @@
 .landing{
     background-color: gray;
     font-size: root(--ff1);
-    height: 25%;
+    height: 100%;
     width: 100%;
+}
+
+
+.body_outer{
+    margin: .5rem .5rem;
+    height:3rem;
 }

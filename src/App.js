@@ -2,16 +2,19 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import LandingPage from './components/LandingPage/LandingPage';
-import AboutPage from './components/AboutPage/AboutPage';
-//import ErrorPage from './components/ErrorPage/ErrorPage';
+import ErrorPage from './components/ErrorPage/ErrorPage';
+import SigninPage from './components/SignupPage/SignupPage';
+import SignupPage from './components/SignupPage/SignupPage';
 
 function App() {
   return (
     <div className="App">
-      <Routes basename>
-        <Route exact path = '/' element={<LandingPage />}></Route>
-        <Route path = '/about' element={<AboutPage />}></Route>
-        
+      <Routes>
+        <Route exact path = '/' element={<LandingPage />} />
+        <Route path = 'signin' element={<SigninPage />} />
+        <Route path = 'signup' element={<SignupPage />} />  
+        <Route path = '/*' element={<LandingPage />} />  
+          
       </Routes>
     </div>
   );
